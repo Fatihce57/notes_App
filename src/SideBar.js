@@ -1,6 +1,6 @@
 import React from 'react'     //.......rfce.......//
 
-function SideBar({ notes, onAddNote }) {
+function SideBar({ notes, onAddNote, onDeleteNote }) {
     return (
         <div className="app-sidebar">
 
@@ -13,12 +13,16 @@ function SideBar({ notes, onAddNote }) {
                 {notes.map((note) => (
                     <div className="app-sidebar-note">
                         <div className="sidebar-note-title">
-                            <strong>TITLE</strong>
-                            <button>Delete</button>
+                            <strong>{note.title}</strong>
+                            <button onClick={() => onDeleteNote(note.id)}>Delete</button>
                         </div>
 
-                        <p>Note preview</p>
-                        <small className="note-meta">Last modified [date]</small>
+                        <p>{note.body && note.body.substr(0, 100) + "..."}</p>
+
+                        <small className="note-meta">Last modified {new Date(note.lastModified).toLocaleDateString("de-DE", {
+                            hour: "2-digit",
+                            minute: "2-digit",
+                        })}</small>
                     </div>
                 ))}
             </div>

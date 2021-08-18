@@ -7,6 +7,7 @@ import uuid from "react-uuid";    //npm install react-uuid//
 function App() {
 
   const [notes, setNotes] = useState([]);
+  const [activeNote, setActiveNote] = useState(false);
 
   const onAddNote = () => {
     const newNote = {
@@ -24,10 +25,12 @@ function App() {
 
 
 
+  
+
   return (
     <div className="App">
-      <SideBar notes={notes} onAddNote={onAddNote} onDeleteNote={onDeleteNote} />
-      <Main />
+      <SideBar notes={notes} onAddNote={onAddNote} onDeleteNote={onDeleteNote} activeNote={activeNote} setActiveNote={setActiveNote} />
+      <Main activeNote={activeNote} />
 
     </div>
   );

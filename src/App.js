@@ -1,7 +1,7 @@
 import './App.css';
 import SideBar from './SideBar';
 import Main from './Main';
-import { useState } from "react";
+import React, { useState } from "react";
 import uuid from "react-uuid";    //npm install react-uuid//
 
 function App() {
@@ -18,11 +18,15 @@ function App() {
     setNotes([newNote, ...notes]);
   };
 
+  const onDeleteNote = (idToDelete) => {
+    setNotes(notes.filter((note) => note.id !== idToDelete));
+  };
+
 
 
   return (
     <div className="App">
-      <SideBar notes={notes} onAddNote={onAddNote} />
+      <SideBar notes={notes} onAddNote={onAddNote} onDeleteNote={onDeleteNote} />
       <Main />
 
     </div>
@@ -30,3 +34,6 @@ function App() {
 }
 
 export default App;
+
+
+//24:28

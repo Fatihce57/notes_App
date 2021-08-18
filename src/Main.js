@@ -10,7 +10,7 @@ function Main() {
 
             <div className="app-main-note-preview">
                 <h1 className="preview-title">TITLE</h1>
-                <div className="markdown-preview">note preview</div>
+                <div className="markdown-preview">Note preview</div>
             </div>
 
         </div>

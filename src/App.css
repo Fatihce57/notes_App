@@ -46,7 +46,7 @@ button:hover {
 .app-sidebar-header {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 10% 3%;
 }
 .app-sidebar-header h1 {
   margin: 0;
@@ -57,7 +57,7 @@ button:hover {
   overflow-y: scroll;
 }
 .app-sidebar-note {
-  padding: 25px;
+  padding: 3%;
   cursor: pointer;
 }
 .sidebar-note-title {
@@ -106,16 +106,16 @@ button:hover {
 
 /* Editing */
 .app-main-note-edit {
-  padding: 25px;
+  padding: 2%;
 }
 
 .app-main-note-edit input,
 textarea {
   display: block;
   border: 1px solid #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 2%;
   width: 100%;
-  height: calc(50vh - 130px);
+  height: calc(50vh - 16vh);
   padding: 10px;
   resize: none;
   font-size: inherit;
@@ -142,4 +142,63 @@ textarea {
   padding: 0 25px 25px 25px;
   font-size: 1rem;
   line-height: 2rem;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 992px) {
+  .app-sidebar-header > h1 {
+    font-size: 1.1rem;
+  }
+  .app-sidebar-header > button {
+    font-size: 1rem;
+  }
+  .app-sidebar-note > p {
+    font-size: 0.7rem;
+  }
+  .sidebar-note-title {
+    font-size: 0.8rem;
+  }
+  .note-meta {
+    font-size: 0.6rem;
+  }
+  #title {
+    font-size: 1.5rem;
+  }
+  .preview-title {
+    font-size: 1.5rem;
+  }
+  .markdown-preview {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-sidebar-header > h1 {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+  .app-sidebar-header > button {
+    font-size: 0.8rem;
+  }
+  .app-sidebar-note > p {
+    font-size: 0.6rem;
+  }
+  .sidebar-note-title {
+    font-size: 0.5rem;
+  }
+  .sidebar-note-title > button {
+    margin-left: 12px;
+  }
+  .note-meta {
+    font-size: 0.3rem;
+  }
+  #title {
+    font-size: 1rem;
+  }
+  .preview-title {
+    font-size: 1rem;
+  }
+  .markdown-preview {
+    font-size: 1rem;
+  }
 }

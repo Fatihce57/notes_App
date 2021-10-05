@@ -2,7 +2,7 @@ import './App.css'
 import SideBar from './SideBar'
 import Main from './Main'
 import React, { useState, useEffect } from 'react'
-import uuid from 'react-uuid' //npm install react-uuid//
+import uuid from 'react-uuid'
 
 function App() {
   const [notes, setNotes] = useState(

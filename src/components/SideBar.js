@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/SideBar.css'
 
 const Sidebar = ({
   notes,

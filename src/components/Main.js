@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import '../css/Main.css'
 
 const Main = ({ activeNote, onUpdateNote }) => {
   const onEditField = (field, value) => {

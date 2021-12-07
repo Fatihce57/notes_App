@@ -2,21 +2,32 @@
     width: 30%;
     height: 100vh;
     border-right: 1px solid #ddd;
+    background-color: black;
+    color: rgb(255, 255, 255)
   }
   
   .app-sidebar-header {
     display: flex;
     justify-content: space-between;
-    padding: 10% 3%;
+    padding: 5% 3%;
   }
   .app-sidebar-header h1 {
     margin: 0;
   }
+  .app-sidebar-header button {
+   color: rgb(255, 255, 255, 255);
+   font-size:2rem;
+  }
   
   .app-sidebar-notes {
     height: calc(100vh - 78px);
-    overflow-y: scroll;
+    overflow: auto;
   }
+
+  ::-webkit-scrollbar {
+    background: transparent;
+  }
+
   .app-sidebar-note {
     padding: 3%;
     cursor: pointer;
@@ -27,6 +38,7 @@
   }
   .app-sidebar-note button {
     color: crimson;
+    font-size:1.3rem
   }
   .app-sidebar-note p {
     margin: 10px 0;
@@ -44,3 +56,22 @@
     background: #08c;
     color: white;
   }
+
+
+@media only screen and (max-width: 600px) {
+  .app-sidebar-header button {
+    font-size:1.3rem;
+   }
+  .app-sidebar-note button {
+    font-size:1rem
+  }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+
+}
+

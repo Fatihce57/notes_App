@@ -1,5 +1,7 @@
 import React from 'react'
 import '../css/SideBar.css'
+import { BiCommentAdd } from 'react-icons/bi';
+import { RiDeleteBinLine } from 'react-icons/ri'
 
 const Sidebar = ({
   notes,
@@ -14,7 +16,7 @@ const Sidebar = ({
     <div className="app-sidebar">
       <div className="app-sidebar-header">
         <h1>Notes</h1>
-        <button onClick={onAddNote}>Add</button>
+        <button onClick={onAddNote}><BiCommentAdd /></button>
       </div>
       <div className="app-sidebar-notes">
         {sortedNotes.map(({ id, title, body, lastModified }, i) => (
@@ -25,7 +27,7 @@ const Sidebar = ({
           >
             <div className="sidebar-note-title">
               <strong>{title}</strong>
-              <button onClick={(e) => onDeleteNote(id)}>Delete</button>
+              <button onClick={(e) => onDeleteNote(id)}><RiDeleteBinLine/></button>
             </div>
 
             <p>{body && body.substr(0, 100) + '...'}</p>

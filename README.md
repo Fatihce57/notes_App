@@ -4,4 +4,4 @@ A nice project where you can write your important notes. You can now follow your
 # Technologies:
 Figma, ReactJs, Bootstrap, CSS, GitHub, Netlify
 
-### <a href="https://warningnotes.netlify.app/" target="_blank">You can see Demo here</a>
+### <a href="https://warningnotes.netlify.app/">You can see Demo here</a>
